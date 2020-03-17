@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Launch {
@@ -35,6 +35,12 @@ const typeDefs = gql`
     launches: [Launch]!
     launch(id: ID!): Launch
     me: User
+  }
+
+  type TripUpdateResponse {
+    success: Boolean!
+    message: String
+    launches: [Launch]
   }
 
   type Mutation {
